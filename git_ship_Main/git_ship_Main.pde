@@ -42,6 +42,7 @@ boolean showDialogue;
 
 Star[] stars = new Star[400];
 SpaceStation alpha;
+Planet earth;
 Person person;
 Checksum healthbar;
 Junk junk;
@@ -71,6 +72,8 @@ void draw(){
     }
     //location
      alpha.display();
+     earth.update();
+     earth.display();
   
     //viewscreen
     if(showDialogue){
@@ -97,6 +100,7 @@ void init(){
   
   //checksum
   healthbar = new Checksum();
+  healthbar.checksum += pow(2, 2);
   //starfield simulation
   for(int i = 0; i < stars. length; i++){
     stars[i] = new Star();
@@ -119,6 +123,7 @@ void init(){
   
   healthbar.checksum = unbinary(new String(bin));
   
+  earth = new Planet(2*width/3, height/4, 50);
   //dialogue
   person = new Person();
   //junk
