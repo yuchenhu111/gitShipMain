@@ -2,5 +2,5 @@
 ArrayList<String> cargo = new ArrayList<String>();
 
 void loadCargo(){
-  cargo.add("16 tons of space station scrap");
+  cargo.add("7 crates of Photon Torpedoes");
 }
